@@ -104,3 +104,8 @@ class QQBasic(object):
                 'openid': openid,
             },
         )
+
+    def set_access_token(self, access_token):
+        """添加access_token"""
+
+        self._access_token = access_token
