@@ -109,3 +109,13 @@ class QQBasic(object):
         """添加access_token"""
 
         self._access_token = access_token
+
+    def get_openid(self):
+        """用access_token换取用户openid"""
+
+        return self._get(
+            url='https://graph.qq.com/oauth2.0/me',
+            params={
+                'access_token': self._access_token,
+            },
+        )
